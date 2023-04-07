@@ -47,7 +47,20 @@ class _MyHomePageState extends State<MyHomePage> {
           child: ListView.builder(
             itemCount: Recipe.samples.length,
             itemBuilder: (BuildContext context, int index) {
-              return buildRecipeCard(Recipe.samples[index]);
+              return GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context){
+                            // TODO: Replace return with return RecipeDetail()
+                            return const Text("Detail page");
+                          }
+                      )
+                  );
+                },
+                child: buildRecipeCard(Recipe.samples[index]),
+              );
             },
           )
       ),
@@ -55,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   }
 
+  //  This widget styles a material card and its children
   Widget buildRecipeCard(Recipe recipe) {
     return Card(
       elevation: 2.0,
