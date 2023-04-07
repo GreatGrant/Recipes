@@ -66,12 +66,19 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
       children: <Widget>[
       Image(image: AssetImage(recipe.imageUrl)),
-    Text(recipe.label)
-    ],
-            const SizedBox(
-              height: 14.0,
-            ),
-            Text(re)
+        const SizedBox(
+            height: 14.0
+        ),
+        Text(
+          recipe.label,
+          style: const TextStyle(
+            fontSize: 20.0,
+            fontFamily: 'Palatino',
+            fontWeight: FontWeight.w700
+          ),
+        )
+      ],
+
     ),
       ),
       );
