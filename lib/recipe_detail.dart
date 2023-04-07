@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:recipes/recipe.dart';
 
 class RecipeDetail extends StatefulWidget{
@@ -8,10 +8,25 @@ class RecipeDetail extends StatefulWidget{
   Key? key,
     required this.recipe
   }): super(key: key);
-  //
-  // @override
-  // State<RecipeDetail>createState() {
-  //   return _RecipeDetailState();
-  // }
+
+  @override
+  State<RecipeDetail>createState() {
+    return _RecipeDetailState();
+  }
+
 }
-// TODO: Add _RecipeDetailState here
+class _RecipeDetailState extends State<RecipeDetail>{
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.recipe.label),
+      ),
+      body: SafeArea(
+        // Todo() change container
+        child: Container(),
+      ),
+    );
+  }
+}
