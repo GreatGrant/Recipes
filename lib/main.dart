@@ -55,13 +55,23 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
           child: ListView.builder(
             itemCount: Recipe.samples.length,
-            itemBuilder: (BuildContext context, int index){
+            itemBuilder: (BuildContext context, int index) {
               // TODO: Update to return Recipe card
-              return Text(Recipe.samples[index].label)
+              return Text(Recipe.samples[index].label);
             },
           )
       ),
     );
   }
-// TODO: Add buildRecipeCard() here
+
+  Widget buildRecipeCard(Recipe recipe) {
+    return Card(
+      child: Column(
+        children: [
+          Image(image: AssetImage(recipe.imageUrl)),
+          Text(recipe.label)
+        ],
+      ),
+    );
+  }
 }
