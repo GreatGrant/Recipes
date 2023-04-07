@@ -57,11 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
             itemCount: Recipe.samples.length,
             itemBuilder: (BuildContext context, int index) {
               // TODO: Update to return Recipe card
-              return Text(Recipe.samples[index].label);
+              return buildRecipeCard(Recipe.samples[index]);
             },
           )
       ),
     );
+
   }
 
   Widget buildRecipeCard(Recipe recipe) {
