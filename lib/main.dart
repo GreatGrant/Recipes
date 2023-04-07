@@ -58,12 +58,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget buildRecipeCard(Recipe recipe) {
     return Card(
       elevation: 2.0,
-      child: Column(
-        children: [
-          Image(image: AssetImage(recipe.imageUrl)),
-          Text(recipe.label)
-        ],
+      child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+      children: [
+      Image(image: AssetImage(recipe.imageUrl)),
+    Text(recipe.label)
+    ],
+    ),
       ),
-    );
+      );
   }
 }
