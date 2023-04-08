@@ -25,7 +25,26 @@ class _RecipeDetailState extends State<RecipeDetail>{
       ),
       body: SafeArea(
         // Todo() change container
-        child: Container(),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 300,
+              width: double.infinity,
+              child: Image(
+                image: AssetImage(widget.recipe.imageUrl),
+              ),
+            ),
+            const SizedBox(
+              height: 4,
+            ),
+            Text(
+                widget.recipe.label,
+              style: const TextStyle(fontSize: 18)
+            )
+            // TODO: Add Expanded
+            // TODO: Add Slider() here
+          ],
+        ),
       ),
     );
   }
