@@ -15,6 +15,7 @@ class Recipe {
       this.ingredients
       );
 
+
   static List<Recipe> samples = [
     Recipe(
       'Spaghetti and Meatballs',
