@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 class Recipe {
   String label;
   String imageUrl;
@@ -36,3 +38,10 @@ class Recipe {
   ];
 }
 // TODO: Add Ingredient() here
+class Ingredient{
+  double quantity;
+  String measure;
+  String name;
+
+  Ingredient(this.quantity, this.measure, this.name);
+}
