@@ -24,7 +24,6 @@ class _RecipeDetailState extends State<RecipeDetail>{
         title: Text(widget.recipe.label),
       ),
       body: SafeArea(
-        // Todo() change container
         child: Column(
           children: [
             SizedBox(
@@ -40,8 +39,20 @@ class _RecipeDetailState extends State<RecipeDetail>{
             Text(
                 widget.recipe.label,
               style: const TextStyle(fontSize: 18)
-            )
-            // TODO: Add Expanded
+            ),
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.all(7.0),
+                  itemCount: widget.recipe.ingredients.length,
+                  itemBuilder: (BuildContext context, int index){
+                  final ingredient = widget.recipe.ingredients[index];
+                  // TODO: Add ingredient.quantity
+                  return Text(
+                      '${ingredient.quantity} ${ingredient.measure} ${ingredient.name}'
+                          );
+                  }
+              ),
+            ),
             // TODO: Add Slider() here
           ],
         ),
