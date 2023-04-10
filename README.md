@@ -29,9 +29,9 @@ The Recipe App includes the following features:
 - Browse through a list of recipes
 - View details on the recipe 
 
-## Contributing
+## Credits
 
-Contributions to the Recipe App are welcome and encouraged! If you would like to contribute, please fork the repository and submit a pull request with your changes.
+The Recipe App was built using the Flutter framework and is based on the Recipe project in the Flutter Apprentice book by Ray Wenderlich. Special thanks to the Flutter and Dart communities for their contributions to this project.
 
 ## License
 
