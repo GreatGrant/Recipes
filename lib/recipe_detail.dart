@@ -16,7 +16,7 @@ class RecipeDetail extends StatefulWidget{
 
 }
 class _RecipeDetailState extends State<RecipeDetail>{
-
+  int _sliderval = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +53,20 @@ class _RecipeDetailState extends State<RecipeDetail>{
                   }
               ),
             ),
-            // TODO: Add Slider() here
+            Slider(
+              min: 1,
+                max: 10,
+                divisions: 9,
+                label: '${_sliderval * widget.recipe.servings} servings',
+                value: _sliderval.toDouble(),
+                onChanged: (newValue){
+                setState(() {
+                  _sliderval = newValue.round();
+                });
+            },
+            activeColor: Colors.green,
+              inactiveColor: Colors.black,
+            )
           ],
         ),
       ),
